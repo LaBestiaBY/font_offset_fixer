@@ -1,0 +1,14 @@
+{
+  "name": "font_offset_fixer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "install.cmd",
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LaBestia",
+  "license": "ISC"
+}
