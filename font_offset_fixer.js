@@ -19,8 +19,8 @@ parseString(xml, function (err, result) {
         log('directory "output" was created. \n\n');
     }
 
-    var previousFontName = result.font.info[0]['$'].face.slice(result.font.info[0]['$'].face.lastIndexOf('\\') + 1);
-    var fontName = previousFontName.slice(0, previousFontName.indexOf('-export'));
+    var previousFontName = result.font.info[0]['$'].face.lastIndexOf('\\') !== -1 ? result.font.info[0]['$'].face.slice(result.font.info[0]['$'].face.lastIndexOf('\\') + 1) : result.font.info[0]['$'].face;
+    var fontName = previousFontName.indexOf('-export') !== -1 ? previousFontName.slice(0, previousFontName.indexOf('-export')) : previousFontName;
     var previousPngName = previousFontName + '.png';
     var pngName = fontName + '.png';
     log('previousFontName: ' + previousFontName + ' \n');
